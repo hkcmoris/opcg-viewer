@@ -42,7 +42,7 @@ body {
     /* position: absolute; */
     width: 2.5in;
     height: 3.5in;
-    border-radius: 0.12in;
+    border-radius: 0.13in;
     box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3), -3px 2px 8px rgba(0, 0, 0, 0.3);
     /* z-index: -1; */
     /* transform: translate(-1.25in, -1.75in);  */
@@ -75,4 +75,26 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.card .print-version {
+    position: relative;
+}
+
+.card .print-version .star, .card .print-version .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.card .print-version .star {
+    font-size: 2.0em;
+    transform: translate(-50%, -58%);
+}
+
+.card .print-version .number {
+    color: white;
+    font-weight: bold;
+    font-size: 0.6em;
+    transform: translate(-50%, -50%);
 }

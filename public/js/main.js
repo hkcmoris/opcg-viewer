@@ -14,6 +14,9 @@ function getCards(setCode) {
             const detailsDiv = document.createElement('div'); // new div for details
             const code = document.createElement('h3');
             const title = document.createElement('h5');
+            const printVersion = document.createElement('div');
+            const star = document.createElement('div');
+            const number = document.createElement('div');
 
             // Set properties of elements
             itemDiv.classList.add('card');
@@ -27,12 +30,18 @@ function getCards(setCode) {
             code.classList.add('card-code');
             code.textContent = item.code;
             title.classList.add('card-title');
+            title.textContent = `${item.name}`;
+            printVersion.classList.add('print-version');
+            star.classList.add('star');
+            number.classList.add('number');
             if (/_p(\d+)/.test(item.id)) {
                 const match = item.id.match(/_p(\d+)/);
-                const number = match ? match[1] : '';
-                title.textContent = `${item.name} ★${number}`;
+                const num = match ? match[1] : '';
+                star.textContent = '★';
+                number.textContent = num;
             } else {
-                title.textContent = item.name;
+                star.textContent = '';
+                number.textContent = '';
             }
 
             // Append elements to their parents
@@ -41,12 +50,15 @@ function getCards(setCode) {
                 groupDiv.classList.add('card-group');
                 dataDiv.appendChild(groupDiv);
             }
-            itemDiv.appendChild(cardContainer);
-            cardContainer.appendChild(img);
+            itemDiv.appendChild(cardContainer); // append card container to item div
+            cardContainer.appendChild(img); // append img to card
             cardContainer.appendChild(detailsDiv); // append details div to card
             detailsDiv.appendChild(code); // append code to details div
+            detailsDiv.appendChild(printVersion); // append print version to details div
+            printVersion.appendChild(star); // append star to print version
+            printVersion.appendChild(number); // append number to print version
             detailsDiv.appendChild(title); // append title to details div
-            groupDiv.appendChild(itemDiv);
+            groupDiv.appendChild(itemDiv); // append item div to group div
         });
     })
     .catch(error => console.error('Error:', error));
