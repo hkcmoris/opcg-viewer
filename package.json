@@ -1,0 +1,27 @@
+{
+  "name": "opcg-viewer",
+  "version": "1.0.0",
+  "description": "Viewer using opcg-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkcmoris/opcg-viewer.git"
+  },
+  "keywords": [
+    "opcg"
+  ],
+  "author": "devground",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hkcmoris/opcg-viewer/issues"
+  },
+  "homepage": "https://github.com/hkcmoris/opcg-viewer#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

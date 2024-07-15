@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#api-data {
+    margin: auto;
+    width: calc(10in - 60px); /* 8.5in is the width of a standard US letter paper, 40px is the total margin */
+    white-space: pre-wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1in 0.5in; /* The first value is the row gap, the second value is the column gap */
+    justify-items: center;
+}
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.1in;
+    justify-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 0.45em;
+}
+
+.card {
+    /* width: 2.5in;
+    height: 3.5in; */
+    /* border: 1px solid #000; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+}
+
+.card img {
+    /* position: absolute; */
+    width: 2.5in;
+    height: 3.5in;
+    border-radius: 0.12in;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3), -3px 2px 8px rgba(0, 0, 0, 0.3);
+    /* z-index: -1; */
+    /* transform: translate(-1.25in, -1.75in);  */
+}
+
+.leader img {
+    box-shadow: 3px 3px 10px rgba(255, 0, 0, 0.5), -3px 3px 10px rgba(255, 0, 0, 0.5), 3px -3px 10px rgba(255, 0, 0, 0.5), -3px -3px 10px rgba(255, 0, 0, 0.5);
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-code {
+    max-width: 0.67in;
+}
+
+.card-title {
+    max-width: 1.83in;
+}
+
+.card-code, .card-title {
+    /* max-width: 2.5in; */
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

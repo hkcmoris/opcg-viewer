@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Welcome to the homepage!</p>
+    <div id="api-data"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/public/js/main.js"></script>
+    <script>
+        console.log('setCode: <%= setCode %>');
+        window.onload = function() {
+            getCards('<%= setCode %>');
+        }
+    </script>
+</body>
+</html>
