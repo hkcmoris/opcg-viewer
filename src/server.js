@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Route to render EJS view
 app.get('/', (req, res) => {
-    res.render('index', { title: 'My API Viewer', setCode: 'OP07' });
+    res.render('index', { title: 'My API Viewer', setCode: '*' });
 });
 
 // Route to render EJS view
